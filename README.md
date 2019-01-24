@@ -16,3 +16,17 @@
 * For Unix/Linux, the kernel is accessed by programs directly. The operating system (O/S) is next to it, not stacked on top.
 * Mac moved towards the way Unix/Linux does things.
 
+
+# Introduction to Command Line 1/24/19
+* Root access is access to the kernel
+ * Do not need root access to install run/programs, just need administrative access
+* Basic command line
+ * Modify the behavior of `ls` and other commands with flags.
+  * `-lap` : lists everything in directory, including hidden files.
+  * `-l` : long list format
+  * `-a` : shows hidden files
+* My home Windows partition when opening Ubuntu can be accessed by:
+ 1. `cd ..` and `cd ..` again
+ 2. `cd mnt` then `cd c` then `cd Users` then `cd Shannon`
+ 3. Then I can access all of my Windows files.
+  
