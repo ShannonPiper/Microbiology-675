@@ -30,3 +30,39 @@
  2. `cd mnt` then `cd c` then `cd Users` then `cd Shannon`
  3. Then I can access all of my Windows files.
   
+
+# 1/29/19 Next Generation Sequencing and Sequence File Formats
+## The Sanger Method:
+* Capitalize on dideoxynucleotide triphosphates (ddNTPs)
+* Add different color fluorescences to different bases (A, T, C, or G) and run on sequencing gel.
+* Stop replication in its tracks and add dye to bases. Still use same technique, more efficiently.
+
+## Next-generation sequencing
+* Sanger sequencing is slow and expensive.
+* Guy wanted to solve his daughters genetic problem, 454 Pyrosequencing
+* 454 Pyrosequencing
+  * Library prep using A and B primers to break into smaller fragments for sequencing 
+  * Emulsion PCR (emPCR)
+   * Attach bead to each fragment, each bead/fragment ends up in one oil bubble
+   * Each individual oil droplet ends up in a well
+   * Add A, C, T, and Gs to each well.
+   * Incorporate luciferin bound dNTPs, each with different color. When incorporate, a flash of light is emitted.
+   * A camera notes the lights emitted.
+   * Produce the same kind of results as Sanger sequencing. A flowgram shows you which bases were present and if the bases existed in runs.
+   * Stops being done for the most part once Illumina sequecing arose
+* Illumina Sequencing
+ * Use sequencing primers on dsDNA separated into ssDNA
+ * An Illumina High-Seq 2000 can produce over 15 Gbp in a single lane (~100 million reads at 150 bp)
+ * Only $4,000 per run, takes longer
+* Pac Bio Sequencing
+ * Invoking polymerase in real time, meaning dependent on half-life of polymerase and generates very long reads
+ * High error rate (~12%)
+ * Often combine Pac BIo with Illumina to get accuracy of Illumina with long sequences from Pac Bio (good for assemblies)
+
+## FASTA format
+* Was originally a program that performed sequence searches of small DNA sequences within a database
+* Was replaced with BLAST
+* File format used in FASTA now adopted as the sequence data format.
+* Anatomy of a FASTA file
+ * First line is a record indicator
+ * > indicates the beginning of a record.
