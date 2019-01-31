@@ -73,8 +73,8 @@
  * There are exons and introns that must be dealt with.
  * After the gi number, there are listings of base pairs which represent/reference exons in the gene. The sequence stitches together all of the exons if it is representing the mature gene.
 * File format extensions:
- * NCBI:
-  * Something.faa = fasta amino acid
-  * Something.fna = fasta nucleotide
+    * NCBI:
+        * Something.faa = fasta amino acid
+        * Something.fna = fasta nucleotide
 * GenBank/DDBJ Header Anatomy:
  * See slides
