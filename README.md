@@ -66,3 +66,15 @@
 * Anatomy of a FASTA file
  * First line is a record indicator
  * > indicates the beginning of a record.
+ * Followed by a geninfo identification number (gi), then an accession number for genbank
+ * Followed by a description of the the gene/protein (end of definition line); no limit to how long definition line can be.
+ * Followed by the actual sequence
+* For eukaryotes:
+ * There are exons and introns that must be dealt with.
+ * After the gi number, there are listings of base pairs which represent/reference exons in the gene. The sequence stitches together all of the exons if it is representing the mature gene.
+* File format extensions:
+ * NCBI:
+  * Something.faa = fasta amino acid
+  * Something.fna = fasta nucleotide
+* GenBank/DDBJ Header Anatomy:
+ * See slides
