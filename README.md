@@ -78,3 +78,10 @@
         * Something.fna = fasta nucleotide
 * GenBank/DDBJ Header Anatomy:
     * See slides
+
+## 1/31/2019
+* Sequence alignment
+    * Local alignment: limit number of deletions
+        * Good for comparing short sequences to large ones
+    * Global alignment: braodest pairing across the board, regardless of insertions and deltions
+* A good alignment contains subsequences of absolute identity (short lengths of exact matches)
