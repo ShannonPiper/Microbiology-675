@@ -85,3 +85,32 @@
         * Good for comparing short sequences to large ones
     * Global alignment: braodest pairing across the board, regardless of insertions and deltions
 * A good alignment contains subsequences of absolute identity (short lengths of exact matches)
+
+# BLAST 2/7/2019
+* standard format for searches: `blast -query input -db database -out output -evalue le-05`
+    * can add argument `-outfmt 6`
+
+# Introduction to Genomes and Genome Assembly 2/7/2019
+* What's in a genome? All genetic material within a given organism
+* What elements can you obtain form a genome?
+    * Entire DNA sequences
+    * ORF/ESTs
+    * 
+* 1995: first paper comes out that characterizes the entire genome of a prokaryote. Before this, people only dealt in genes. After 1995 is considered the genomic era.
+* whole-genome shotgun:
+    * cut up genome into a lot of random tiny pieces and you sequence all of those pieces. Use computer algorithm to put these pieces together: Assembly
+    * The goal is the cover the entire genome using reads that are ontained from the sequencer.
+    * The more reads and the larger reads make it easier to cover the entire genome. But there is a trade-off between read-length and coverage.
+* Terms:
+    * Coverage: the number of times a give bp in a geonome is sequences on average.
+        * Also provides confidence in a base call.
+        * A complex genome has a coverage of 10-15X; Draft is <8X
+* What contributes to assembly difficulties?
+    * Read length
+    * Coverage
+    * Repeat Elements
+        * Length helps solve this problem
+* Draft vs. complete genomes
+    * Complete chromosome: orintation known
+    * Multiple contigs: orientation may be known; this is fine for a lot of people to answer specific questions.
+
