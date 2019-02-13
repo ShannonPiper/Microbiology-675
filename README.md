@@ -114,3 +114,60 @@
     * Complete chromosome: orintation known
     * Multiple contigs: orientation may be known; this is fine for a lot of people to answer specific questions.
 
+
+# 2/12/2029 Genome Assembly continued
+* Genome finishing
+    * Fill in the gaps between contigs
+    * Very expensive
+* Approaches to improve an assembly:
+    * mate-paired/paired-end sequencing - a way to determine relative orientation (454 techonology specific, different from paired-end reads from illumina)
+    * Used to obtain a Scaffold - a low cverage DNA sequence that can be used to map a while-genome shotgun reads onto.
+    * Cut DNA into fragments that are a certain size which can be sequenced by the sequencer, know sequence right next to biotin and can walk from there across gap between biotin sequences to generate small overlapping sequences that fill in a gap.
+* Assembly statistics:
+    * N50: contig or scaffold N50 is a weighted median statistic such that 50% of the entire assembly is contained in contigs greater than or equal to the median/N50 contig size.
+        * Want N50 to be large enough that a contig likely contains a gene within the average reading frame of that organism.
+* Assembly:
+    * Fragment DNA and sequence
+    * Look for overlapping regions in reads
+    * Generate map or graph of sequences that match each other. Becomes mathematical question
+    * Must compare every read against every other read.
+    * Becomes very challenging for short reads
+* De Bruijin Graph:
+    * Faster approach
+    * Break down each sequences into a smaller subset.
+    * Computes a K-mer, a subset of K length from the read itself.
+    * A graph is constructed from the K-mer subsets
+    * Now the somparison is reduced to looking for patterns in the graphs
+    * It is less time-consuming to find the total number of "patterns" in a group of patterns than pair-wise comparisons of every read.
+    * Once pattern groups are formed, the assembly proceeds in a similar manner as the traditional approach.
+* The Celera Assembler
+    * An assembler developed specifically for assembly of the human genome
+    * Considered the premier assembler of its time.
+* Anatomy of WGS assembly
+    * Allow mismatches to fill in gaps in contigs.
+* Scaffold:
+    Typically generate from mate-paired sequences
+* Celera Assembly Pipeline
+    1. Trim and screen: 
+        * Reads are quality-trimmed.
+        * Contaminant and vector sequences are removed. Also avoid low-quality sequences.
+        * Make a note of reads with repeats.
+        * gatekeeper program to vet inputs/assign IDs
+    2. Overlapper:
+        * Finds all of overlaps > 40bp allowing 6% mismatch
+    3. Unitiger: assemble comtigs
+        * Compute all overlap consistend sub-assemblies. Unitigs (Uniquely Assembled Contig).
+    4. Scaffolder: layer Unitigs onto scaffold
+    5. Repeat Rez I, II:
+        * Fill repeat gaps with doubly anchored positive unitigs
+        * Fill repeat gaps with assembled, singly anchored reads.
+* Anatomy of a fastq (Illumina) file
+    * Quality scores: the Phred score
+        * Phred is a commonly used metric in Sanger to indicate the quality of a base call.
+        * Represented as the probability of an incorrect base call.
+    * Fastq file similar to fasta file, but it contains information about the quality of the basepair call from the sequencer.
+        * Line 1: Always starts with @ and contains run information
+        * Line 2: Always starts with # and contains the base calls. Starts with the primer thing
+        * Line 3: Always starts with + and contains additional information about the call
+        * Line 4: Contains the quality score for each base.
+            * Each character on this line represents an ASCII value. Subtract 33 form that number to get a quality score.
