@@ -171,3 +171,14 @@
         * Line 3: Always starts with + and contains additional information about the call
         * Line 4: Contains the quality score for each base.
             * Each character on this line represents an ASCII value. Subtract 33 form that number to get a quality score.
+            
+# Celera Assembler Download 2/14/2019
+* Installation process
+    * Compile source code
+    * Install program -> compiles into binaries that computer recognizes as executables
+    * Creates binaries and thus executables in the folder from which they are created.
+    * `apt-get` compiles binaries and puts them in folder in root directory (`/bin`)
+        * Computer can use exectuables in the bin folder
+    * For Celera, we need to make sure we move the binaries into the bin folder, or make celera fold have the same privelages as the `/bin` folder.
+    * All of the folders which the computer can automatically run executables are include in the `$PATH`. List of folders that the computer will look through for executables when using command line.
+* Tarring a file into a tar ball maintains the hierarchy of the folder you are working with.
