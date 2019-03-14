@@ -182,3 +182,30 @@
     * For Celera, we need to make sure we move the binaries into the bin folder, or make celera fold have the same privelages as the `/bin` folder.
     * All of the folders which the computer can automatically run executables are include in the `$PATH`. List of folders that the computer will look through for executables when using command line.
 * Tarring a file into a tar ball maintains the hierarchy of the folder you are working with.
+
+
+# Genome Annotation and Gene Ontology
+* KEGG Ontology:
+    * KOID, defines a protein within a specific metabolic pathway
+    * Like COG, but specific to metabolism
+    * Other ontologies: (databases for different areas of interest)
+        * Gene ontology (GO): put a standardized language to the way that we annotate things.
+        * TransportDB: System of clasifying transporters
+        * Carbohydrate-active enzymes (CAZy): studying sugar degradation, etc.
+* Improving predictions and assembly:
+    1. Transcript sequencing - verify a gene is "real"
+    2. Phylogenetic context - dosimilar organisms also have similar genes
+    3. Operons - does a gene fall in an operon that makes sense? (Conserved Operon, Rosetta Stone)
+    4. Understand Genome Topography
+* Annotation to improve and assembly:
+    * If there seems to be operons that should go together based on previous studies, you might be able to place two contigs near each other on the genome assembly. Work with conserved operons
+    * Conserved operon concept:
+        * Genes in operons in one genome infer funtionality in genes not in operons in another genome.
+* Chromosomal Geography:
+    * Genomes are typically oriented with respect to origin of replication
+    * Ex) Typically, the first gene after oriC is dnaA.
+    * There is 
+* What's on the linear chromosome?
+* Artemis:
+    * Interacting with a genome
+    * geneious is a more modern version (not really free)
