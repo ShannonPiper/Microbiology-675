@@ -33,3 +33,5 @@ Other:
 Then `velvetg` is run on the output folder of `velveth` and assembles the sequences:
 
 `velvetg Ypestis_velvet21 -exp_cov auto -cov_cutoff auto`
+
+## Fetching from SRA
