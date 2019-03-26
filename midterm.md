@@ -22,7 +22,11 @@ Other:
 
 `tblastn -db Ec_K12.ffn -query My_sequences.faa -out My_sequences.tbalstn -evalue 1e-05`
 
-`tblastx -db Ec_K12.ffn -quert My_sequences.ffn -out My_sequences.tblastx -evalue le-05`
+`tblastx -db Ec_K12.ffn -query My_sequences.ffn -out My_sequences.tblastx -evalue le-05`
+
+Flags:
+
+`-outfmt 8` outputs as a table with no alignments.
 
 ## Genome Assemblies:
 
@@ -39,9 +43,13 @@ Then `velvetg` is run on the output folder of `velveth` and assembles the sequen
 `ftp://ftp-trace.ncbi.mln.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR133/SRR133640/Srr133640.sra`
 
 ## SRA to fastq: `fastqdump`:
-```% fastq-dump \
+```
+% fastq-dump \
     --split-files --split-spot --skip-technical \
     --minReadLen 64 \
     --defline-seq  @\$ac.\$si \
     --defline-qual "+" \
-    ./SRR133640.sra```
+    ./SRR133640.sra
+```
+    
+https://edwards.sdsu.edu/research/fastq-dump/
