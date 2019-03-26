@@ -56,6 +56,15 @@ https://edwards.sdsu.edu/research/fastq-dump/
 
 
 
-ftp://ftp-trace.ncbi.mln.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR805/SRR8053472/SRR8053472.sra
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR805/SRR8053472/SRR8053472.sra
 
-ftp://ftp-trace.ncbi.mln.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR855/SRR8550118/SRR8550118.sra
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR855/SRR8550118/SRR8550118.sra
+
+ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR566/SRR566089/SRR566089.sra
+
+ fastq-dump \
+    --split-files --split-spot --skip-technical \
+    --minReadLen 64 \
+    --defline-seq  @\$ac.\$si \
+    --defline-qual "+" \
+    ./SRR133640.sra
