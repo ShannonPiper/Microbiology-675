@@ -35,3 +35,13 @@ Then `velvetg` is run on the output folder of `velveth` and assembles the sequen
 `velvetg Ypestis_velvet21 -exp_cov auto -cov_cutoff auto`
 
 ## Fetching from SRA
+
+`ftp://ftp-trace.ncbi.mln.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR133/SRR133640/Srr133640.sra`
+
+## SRA to fastq: `fastqdump`:
+```% fastq-dump \
+    --split-files --split-spot --skip-technical \
+    --minReadLen 64 \
+    --defline-seq  @\$ac.\$si \
+    --defline-qual "+" \
+    ./SRR133640.sra```
