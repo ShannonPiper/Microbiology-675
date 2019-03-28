@@ -218,7 +218,27 @@
 ```
 prodigal -a ypestis21.faa -d ypestis21.ffn -i contigs21.fa -s Ypestis21_summary.txt -c
 ```
+* Not great for eukaryotes, but uses starts and stops that are pretty universal in prokaryotes.
 
+* COG and Pfam databases
+    * Abvailable through NCBI, part of conserved domain database
+        * go to ncbi cdd and go to ftp.
+    * COG
+        * COG is for prokaryotes, KOG is for eukaryotes
+    * Pfam
+        * includes HAMMER
+    * NCBI made rpsblast
+        * Reverse psi blast
+        * allows for PSSM: position specific scoring matrix
+        * rpsblast follows all the same rules as normal blast.
+            * Takes query file and database.
+            * Making that database is hard, but exist in COG and Pfam databases.
+    * rpblast
+    ```
+    rpblast+ -query -ypestis21.faa -db Cog -o Ypestis.cog -evalue 1e-05
+    ```
+Test:
+Use first 75 lines from .faa file with `head -n 75 ypestis21.faa > ypestis75_21.faa`
 
 
 
