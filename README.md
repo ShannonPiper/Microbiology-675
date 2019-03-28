@@ -209,3 +209,19 @@
 * Artemis:
     * Interacting with a genome
     * geneious is a more modern version (not really free)
+
+# Genome Annotation 3/28/2019
+
+## Prodigal
+* `-c-`only predicts genes that are completely contained within a contig.
+
+```
+prodigal -a ypestis21.faa -d ypestis21.ffn -i contigs21.fa -s Ypestis21_summary.txt -c
+```
+
+
+
+
+
+
+
