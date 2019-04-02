@@ -241,7 +241,8 @@ Test:
 Use first 75 lines from .faa file with `head -n 75 ypestis21.faa > ypestis75_21.faa`
 
 
-
+# 4/2/2019
+`hmmpress dehNOG.hmm` turns into hmmerable database
 
 
 
