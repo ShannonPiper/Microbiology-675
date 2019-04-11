@@ -244,5 +244,28 @@ Use first 75 lines from .faa file with `head -n 75 ypestis21.faa > ypestis75_21.
 # 4/2/2019
 `hmmpress dehNOG.hmm` turns into hmmerable database
 
+`hmmscan` like a blastp
+
+# 4/4/2019
+* CAZy: database for carbohydrate-active enzymes
+* dbCAN: web server and database for carbohydrate-active enzyme annotation.
+
+https://www.genome.jp/tools/kofamkoala/    hmmer models
+
+* KOG, KEGG, PFAM are the databases that people are interested in annotating their genome against.
+
+* Gene ontology: gives the hierarchy of what the protein you are interested in belongs to (cell, glycolysis... etc.)
+
+* Nucleic Acids Research (NAR) releases a webserver issue every year where there is a rundown of all of these databases.
+    * Is there a database that categorizes "x". Look at this issue of NAR.
+    
+## Ways to Map contigs to a reference genome.
+* MAUVE: 
+
+
+# Python 4/9/2019
+* Python is good at dealing with strings (such as sequencing data)
+
+
 
 
